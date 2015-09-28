@@ -1,0 +1,436 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>aanmelden frontend -</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body>
+
+<header>
+    <img src="img/CMD-logo.png" alt="CMD logo"/>
+        <nav>
+            <ul>
+                <li><a href ="#">Home</a></li>
+                <li><a href="index.html">Opleiding</a></li>
+                <li><a href="#">Onderwijsprogramma</a></li>
+                <li><a href="#">Organisatie</a></li>
+                <li id="current"><a href="aanmelden.html">Stages en Projecten</a></li>
+            </ul>
+        </nav>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Stages</a></li>
+        <li><a href="#">Projecten</a></li>
+    </ul>
+</nav>
+
+    <!--[if lt IE8]>
+
+            <h1><a href="https://www.google.com/chrome?hl=nl"> = vervang IE voor Chrome.</a></h1>
+
+    <!endif]-->
+
+<!-- dit is de section, deze pagina bevat maar een section omdat alle onderdelen aan elkaar gerelateerd zijn. In deze section bevindt zich een artikel en een 4-delig formulier. -->
+    <section>
+
+        <!-- dit is de hoofdtitel, deze staat buiten een article element omdat deze voor de hele section geld, hier begint dus ook de section mee -->
+        <h1>Aanmelden</h1>
+
+        <!-- in deze section staat een inleiding op het formulier, dat is dit artikel, deze wordt aangegeven met een article tag -->
+        <article>
+        <p>Bent u geinteresseerd in samenwerken met CMD Amsterdam? Dat kan!
+        Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.</p>
+
+        <p>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</p>
+
+        <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd.
+        Voor vragen of opmerkingen kunt u contact <a href="http://www.hva.nl/onderwijs/opleidingen/content/dmci/communication-and-multimedia-design/meer-informatie/contact/contact-en-locatie.html"> contact </a>met ons op.</p>
+        </article>
+
+        <!-- Dit is deel 1 (contactgegevens) van het formulier, deze wordt aangegeven met een form tag met daarin een fielset, een legend en labels met verschillende input types en id's. -->
+        <form>
+            <fieldset>
+
+            <legend> Contactgegevens </legend>
+            <ol>
+                <li>
+                    <label for ="name">Naam </label>
+                    <input type="text" id="name" placeholder="Voor- en achternaam">
+                </li>
+
+                <li>
+                    <label for ="bedrijf">Bedrijf </label>
+                    <input type="text" id="bedrijf">
+                </li>
+
+                <li>
+                    <label for ="straat">Adres </label>
+                    <input type="text" id="straat" placeholder="Zonder nummer">
+                </li>
+
+                <li>
+                    <label for ="postcode">Postcode </label>
+                    <input type="text" id="postcode">
+                </li>
+
+                <li>
+                    <label for ="plaats">Plaats </label>
+                    <input type="text" id="plaats">
+                </li>
+
+                <li>
+                    <label for ="telefoon">Telefoon </label>
+                    <input type="tel" id="telefoon">
+                </li>
+
+                <li>
+                    <label for ="email">Email </label>
+                    <input type="email" id="email">
+                </li>
+            </ol>
+            </fieldset>
+
+            <!-- Dit is deel 2 (aanmelden als) van het formulier, deze wordt aangegeven met een form tag met daarin een fielset, een legend en een label met daarin een dropdown menu met opties, daar tussen zit ook de optie 'selecteer een optie' zodat de gebruiker niet perongeluk een optie selecteert omdat die op default stond, terwijl hij die optie niet wilde -->
+            <fieldset>
+
+            <legend> Aanmelden als </legend>
+            <ol>
+                <li>
+                    <label for="aanmelden">Ik wil mij aanmelden</label>
+                    <select id = "aanmelden">
+                        <option>- Selecteer een optie -</option>
+                           <option>Als stagebedrijf</option>
+                          <option>Voor een project</option>
+                    </select>
+                </li>
+            </ol>
+            </fieldset>
+
+            <!-- Dit is deel 3 (project) van het formulier, deze wordt aangegeven met een form tag met daarin een fieldset, een legend en labels met verschillende input types en id's, daarnaast komt ook hier een selectie menu voor -->
+            <fieldset>
+
+            <legend> Project </legend>
+            <ol>
+                <li>
+                    <label for ="titel">Titel </label>
+                    <input type="text" id="titel">
+                </li>
+
+                <li>
+                    <label for ="opdracht">Opdrachtomschrijving </label>
+                    <input type="text" id="opdracht">
+                </li>
+
+                <li>
+                    <label for ="doelgroep">Doelgroepomschrijving </label>
+                    <input type="text" id="doelgroep">
+                </li>
+
+                <li>
+                    <label for ="doelstelling">Doelstelling/intentie van het project </label>
+                    <input type="text" id="doelstelling">
+                </li>
+
+                <li>
+                    <label for ="looptijd">Looptijd </label>
+                    <input type="text" id="looptijd" placeholder="In weken">
+                </li>
+
+                <li>
+                    <label for ="deadline">Deadline </label>
+                    <input type="text" id="deadline" placeholder="dd-mm-jj">
+                </li>
+
+                <li>
+                    <label for="geschiktVoorProject">Geschikt voor</label>
+                    <select id = "geschiktVoorProject">
+                        <option>- Selecteer een optie -</option>
+                           <option>Eerstejaarsstudenten</option>
+                          <option>Tweedejaarsstudenten</option>
+                          <option>Derdejaarsstudenten</option>
+                          <option>Afstudeerstudenten</option>
+                          <option>Onbekend</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for ="opmerkingProject">Opmerking </label>
+                    <input type="text" id="opmerkingProject">
+                </li>
+            </ol>
+
+            </fieldset>
+
+            <!-- Dit is deel 4 (stage) van het formulier, deze wordt aangegeven met een form tag met daarin een fieldset, een sub fieldset, een legend en labels met verschillende input types en id's, daarnaast komt ook hier een selectie menu voor -->
+            <fieldset>
+
+                <legend> Stage </legend>
+                <ol>
+                <li>
+                    <label for="geschiktVoorStage">Geschikt voor</label>
+                    <select id = "geschiktVoorStage">
+                        <option>- Selecteer een optie -</option>
+                          <option>Tweedejaarsstudenten</option>
+                          <option>Afstudeerstudenten</option>
+                          <option>Onbekend</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="duurStage">Hoe lang duurt de stage?</label>
+                    <select id = "duurStage">
+                        <option>- Selecteer een optie -</option>
+                          <option>10 weken</option>
+                          <option>20 weken</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="datum">Begin datum</label>
+                    <input type="text" id="datum" placeholder="dd-mm-jj">
+                </li>
+
+                <li>
+                    <label for="werkzaamheden">Beschrijving werkzaamheden</label>
+                    <input type="text" id="werkzaamheden">
+                </li>
+
+                <li>
+                <fieldset>
+                    <legend>Beschrijving stagebedrijf</legend>
+                    <ol>
+                    <li>
+                           <label for ="bedrijfsnaam">Bedrijfsnaam </label>
+                        <input type="text" id="bedrijfsnaam">
+                    </li>
+
+                    <li>
+                        <label for ="adresStagebedrijf">Adres </label>
+                        <input type="text" id="adresStagebedrijf">
+                    </li>
+
+                    <li>
+                        <label for ="postcodeStagebedrijf">Postcode </label>
+                        <input type="text" id="postcodeStagebedrijf">
+                    </li>
+
+                    <li>
+                           <label for ="plaatsStagebedrijf">Plaats </label>
+                        <input type="text" id="plaatsStagebedrijf">
+                    </li>
+
+                    <li>
+                        <label for ="sector">Sector </label>
+                        <input type="text" id="sector">
+                    </li>
+
+                    <li>
+                        <label for ="corebusiness">Core business </label>
+                        <input type="text" id="corebusiness">
+                    </li>
+                </ol>
+                </fieldset>
+
+                 </li>
+
+                    <li>
+                        <label for ="opmerkingStage">Opmerking </label>
+                        <input type="text" id="opmerkingStage">
+                    </li>
+                </ol>
+
+            </fieldset>
+
+        <!-- hier wordt het formulier afgesloten -->
+        </form>
+
+    <!-- hier wordt de section afgesloten -->
+    </section>
+
+    <!-- Aside teksten en info: Laatste mededelingen, Agenda, Twitter -->
+<aside>
+
+            <section>
+                <h2><a href="#">Laatste mededelingen</a></h2>
+                <article>
+                    <h3>Teamproject - Usabilitylab rooster</h3>
+                    <p>
+                        <time datetime="2012-02-14">14 februari 2012</time>
+                        <a href="#" rel="author">A.W.M. Feleus</a>
+                        Beste studenten, Aanstaande maandag is het instructiecollege voor het usabilitylab en vanaf dinsdag starten de eerste teams met testen. In jullie rooster is aangegeven wanneer jullie gaan testen en kunnen jullie ook zien met welk team. Let er op dat…
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>V2 assessments rooster Blok 3</h3>
+                    <p>
+                        <time datetime="2012-02-15">15 februari 2012</time>
+                        <a href="#" rel="author">J.B. Wijnmaalen</a>
+                        Het V2 assessment rooster voor Blok 3 kan je  downloaden van de vakpagina.
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Portfoliogesprekken V1</h3>
+                    <p>
+                        <time datetime="2012-02-27">27 februari 2012</time>
+                        <a href="#" rel="author">H.H.G. Konickx</a>
+                        Het rooster voor mijn portfoliogesprekken staat online bij SLC Blok 3. Let op! Er kan nog eea veranderen. Houd het intranet in de gaten.
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Mediasociologie: tentamen en huiswerk week 7</h3>
+                    <p>
+                        <time datetime="2012-02-27">27 februari 2012</time>
+                        <a href="#" rel="author">T. Ploeg</a>
+                        Beste studenten Mediasociologie, Het tentamen Mediasociologie vindt plaats op maandag 26 maart van 16.50u tot 18.30u. Locatie wordt nog bekend gemaakt. Voor…
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Verdien 2 SRP!</h3>
+                    <p>
+                        <time datetime="2012-02-29">29 februari 2012</time>
+                        <a href="#" rel="author">L.C.D.J. van der Vlies</a>
+                        Interesse in online marketing? Verdien 2 SRP bij een project voor Knowhowww, een online marketingbureau in Amsterdam. Een van de projecten voor dit bureau is Pet Plan, een verzekeringsmaatschappij voor huisdieren. Knowhowww wil graag een viral…
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2><a href="#">Uitagenda</a></h2>
+                <article>
+                    <h3>Fiber Festival</h3>
+                    <footer>
+                        <p>Op <time datetime="2012-03-24">24 maart</time> in het Trouw gebouw</p>
+                    </footer>
+                    <p>
+                        <a href="#" rel="author">M.S. t Hooft</a>
+                        Audiovisueel netwerkfestival in Trouw Amsterdam. Meer info: http://www.fiber-space.nl
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Mobilism 2012</h3>
+                    <footer>
+                        <p>Van <time datetime="2012-05-10">10 mei</time> tot <time datetime="2012-05-11">11 mei</time> in Tuschinski</p>
+                    </footer>
+                    <p>
+                        <a href="#" rel="author">M.S. t Hooft</a>
+                        Mobile is becoming increasingly important to web designers and developers because users expect a site to work on their phones. Simultaneously, the web is becoming increasingly important to the mobile world because it is the only way to deploy an…
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Appril</h3>
+                    <footer>
+                        <p>Van <time datetime="2012-04-02">2 april</time> tot <time datetime="2012-04-30">30 april</time> in Amsterdam</p>
+                    </footer>
+                    <p>
+                        <a href="#" rel="author">M. Blekemolen</a>
+                        Apps zijn niet meer weg te denken uit het dagelijks leven van miljoenen gebruikers. Amsterdam heeft het ideale klimaat voor app ontwikkelaars. De stad is hard op weg om internationaal door te breken als Appsterdam, de gelijknamige organisatie die ook…
+                        <a href="#" rel="bookmark">lees verder</a>
+                    </p>
+                </article>
+            </section>
+
+            <!--
+                Twitter feed:
+                @cmdamsterdam
+                #cmda
+            -->
+
+        </aside>
+
+<!-- Footer -->
+<footer>
+    <section>
+        <h1>Sitemap</h1>
+
+        <ul>
+            <li>Opleiding</li>
+                <li>
+                    <ul>
+                        <li>Visie & Beleid</li>
+                        <li>Opbouw Studieprogramma</li>
+                        <li>Competenties</li>
+                        <li>Diploma</li>
+                        <li>Beroepen</li>
+                    </ul>
+                </li>
+
+            <li>Onderwijsprogramma</li>
+                <li>
+                    <ul>
+                        <li>Mededelingen</li>
+                        <li>Uitagenda</li>
+                        <li>Propedeuse</li>
+                        <li>Verdieping 1</li>
+                        <li>Verdieping 2</li>
+                        <li>Afstuderen</li>
+                    </ul>
+                </li>
+
+            <li>Organisatie</li>
+                <li>
+                    <ul>
+                        <li>Contact</li>
+                        <li>Blog</li>
+                        <li>Docenten</li>
+                        <li>Onderwijsbureau</li>
+                        <li>Stagebureau</li>
+                        <li>Buitenlandbureau</li>
+                        <li>Examencommissie</li>
+                        <li>Decaan</li>
+                    </ul>
+                </li>
+
+            <li>Stages en Projecten</li>
+                <li>
+                    <ul>
+                        <li>Stages</li>
+                        <li>Projecten</li>
+                    </ul>
+                </li>
+        </ul>
+    </section>
+
+    <section>
+        <h1>Contact</h1>
+            CMD Amsterdam
+            Bezoekadres: Rhijnspoorplein 1, 1091 GC Amsterdam
+            Postadres: Postbus 1025, 1000 BA Amsterdam
+            Telefoon: 020 595 1855
+            Email: <a href="#">info@cmd.hva.nl</a>
+            RSS: <a href="#">Feed intranet</a>
+    </section>
+
+    <section>
+        <h1>Zoeken</h1>
+            <form>
+                <input type="text">
+                <input type="submit" value="Zoek">
+            </form>
+    </section>
+
+    <section>
+        <h1>About</h1>
+            CMD Amsterdam is een ontwerp opleiding voor Interactieve Media.
+            Op de opleiding Communication & Multimedia Design (CMD) Amsterdam leer je alles over het ontwerpen van online interactieve media. Dit betekent begrijpen, bedenken en maken van interactieve mediatoepassingen zoals websites, mobiele applicaties en interactieve televisie.
+    </section>
+
+    <section>
+        <h1>Credits</h1>
+            © 2007 Hogeschool van Amsterdam - DMCI - CMD Amsterdam
+            <a href="#">Geef ons feedback</a>
+    </section>
+</footer>
+
+</body>
+</html>

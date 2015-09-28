@@ -1,0 +1,404 @@
+/**
+ * les 5
+ */
+
+/* ------------------------------------------- BODY ------------------------------------------- */
+
+body {
+    background: #ffffff;
+    font: normal 100% helvetica;
+    margin: 0 auto;
+    color: #373737;
+    line-height: 1.5em;
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/* ------------------------------------------- HEADER ------------------------------------------- */
+
+/* header = logo + hoofdnavigatie */
+header {
+    border-bottom: solid 0.1em #000;
+    margin-top: 1em;
+}
+
+/* menu knoppen naast elkaar en achtergrond kleur. Dit is een child selector wat dit precies doet is dat die in de header (nav, ul, li in een keer kunt aanpassen) */
+header > nav > ul > li {
+    padding: 0.7em;
+    list-style: none;
+    background: #696969;
+    display: inline-flex; /* */
+}
+
+/* bij hover en active link wordt de achtergrond kleur lichter */
+header > nav > ul > li:hover, #current {
+    background: #fdaf89;
+    transition: all 1s ease-in-out; /* generieke transitie, ease in out betekent dat die langzaam begint en eindigt. */
+}
+
+/* de actieve link wordt wit */
+#current > a {
+    color: #fff;
+}
+
+/* hoofdnavigatie link geen streep en kleur naar wit */
+header > nav > ul > li > a {
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* hoofdnavigatie hover link wit */
+header > nav > ul > li > a:hover{
+    color: #fff;
+}
+
+/* hoofdnavigatie stuk naar links */
+header > nav {
+    margin-left: -2.6em;
+}
+
+/* ------------------------------------------- SUBMENU ------------------------------------------- */
+
+/* de subnavigatie links naast de tekst neerzetten d.m.v. float en de breedte op 15% van het scherm */
+body > nav {
+    width: 15%;
+    float: left;
+    margin-top: 0.7em;
+    margin-right: 1.5em;
+    font-size: 0.9em;
+    background-color: #A52A2A;
+}
+
+
+body > nav > ul > li {
+    list-style: none;
+    margin-left: -2.7em;
+    padding: 1em;
+}
+
+body > nav > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body > nav > ul > li > a:hover {
+    color: #90EE90;
+    text-shadow: 0.1em 0.1em 0.1em #000;
+    transition: all 1s;
+}
+
+/* ------------------------------------------- CONTENT ------------------------------------------- */
+
+body > section {
+    width:50%;
+    float:left;
+}
+
+p {
+    transition:All 1s ease;
+    transform: scale(1);
+}
+
+p:hover{
+    transform: scale(1.1);
+}
+
+article > img {
+    border: 0.2em solid #f16723;
+    box-shadow: 0em 0em 0.3em 0.4em #0000FF;
+    border-radius:1em;
+    width: 100%;
+    margin: 1em auto;
+}
+
+h1, p {
+    margin: 1em 0;
+    text-shadow: 1em 1em 0.5em rgba(150, 150, 150, 1);
+}
+
+h1 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #373737;
+}
+
+a:hover {
+    color: #f16723;
+}
+
+p > a {
+    font-size: 1.15em;
+    text-shadow: 0.1em 0.05em 0.1em #fdaf89;
+}
+
+/* Opleiding */
+section > h1 {
+    margin-top: 0.7em;
+    font-size: 1.4em;
+}
+
+/* Ontwerp opleiding voor IAM */
+section > article > section > h1 {
+    font-size: 1em;
+}
+
+/* CMD Amsterdam, Studieprogramma, Beroepen*/
+section > article > h1 {
+    font-size: 1.2em;
+}
+
+/* Waar leiden we voor op? */
+section > article > article > h1 {
+    font-size: 1em;
+}
+
+h1 + p {
+    margin: -1em 0 1em;
+}
+
+article > article > ol > li:nth-child(2n) {
+    background: none;
+}
+
+article > article > ol > li {
+    background: #ebebeb;
+    padding: .5em;
+    margin: 0;
+}
+
+/* ------------------------------------------- FORM ------------------------------------------- */
+
+form {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 100%;
+
+}
+
+[for="name"]:after, [for="email"]:after {
+    content: "*";
+    color: #000;
+}
+
+section > form > input {
+    width: 90%;
+}
+
+fieldset {
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+    min-width: 16em;
+    border: .1em solid #f16723;
+    border-radius: 1em;
+    box-shadow: 0 0 1.2em currentColor;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+fieldset:hover {transform: rotate(180deg);}
+
+/* dit is een sibling en dit zorgt ervoor dat het direct van eerste element naar hoofdelement gaat */
+fieldset + fieldset {
+    margin: 2em 0 0;
+}
+
+legend {
+    padding: 0;
+    font-size: 1.2em;
+    position: absolute;
+}
+
+legend + ol {
+    padding: 2em 0 0;
+    list-style: none;
+}
+
+section > form > fieldset > ol > li {
+    padding: .5em;
+    margin: 0;
+}
+
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* Dit wordt gebruikt om de browser te vertellen wat de breedte en hoogte qua waarde moet hebben.  */
+    font-size: 100%;
+    border-radius: .5em;
+    border: .3em solid #737373;
+    box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
+
+
+    transition: all 1s;
+
+    margin: .3em 0;
+    padding: 0.1em;
+}
+
+input:hover {
+    border: .3em solid #f16723;
+}
+
+input:focus {
+    box-shadow:  0 0 .9em #f16723;
+    border: .3em solid #f16723;
+}
+
+/* ------------------------------------------- ASIDE ------------------------------------------- */
+
+aside {
+    width:25%;
+    float:right;
+    font-size:90%;
+}
+
+aside > h1 {
+    margin-top: .7em;
+}
+
+aside > section > h1 {
+    font-size: 100%;
+}
+
+aside > section > p > span > a {
+    color: #f16723;
+}
+
+aside > section > h1 + h1 {
+    font-size: .8em;
+}
+
+aside > h1:last-of-type {
+    border-top: .05em solid #000;
+    padding-top: .8em;
+}
+
+/* ------------------------------------------- FOOTER ------------------------------------------- */
+
+footer {
+    background: #A52A2A;
+    border-top: solid 0.1em #000;
+    clear: both;
+    width:100%;
+    font-size: 0.75em;
+    display:inline-block;
+}
+
+footer > section {
+    float:left;
+    width:18%;
+    margin-left:1em;
+    color: #FFFFFF;
+}
+
+footer > section > form > input[type=submit] {
+    background-color: #f16723;
+    box-shadow: .1em .1em .2em rgba(0,0,0,.5);
+}
+
+footer > section > ul > li {
+    list-style: none;
+    color:#FFFFFF;
+}
+
+footer > section > ul > li > ul > li {
+    list-style: none;
+}
+
+/* ------------------------------------- MEDIA QUERY 1: 55.63 em (ipad screen 870 px) ------------------------------------- Media screen die geeft aan dat heel de pagina aan de hand van gegeven waarde die in de breedte staat mee schaalt. Dit zorgt ervoor dat de pagina op verschillende viewport zichtbaar is in verhouding blijft.*/
+
+@media screen and (max-width: 55.63em) {
+
+    body > nav {
+        width:100%;
+        float:none;
+        font-size: 0.7em;
+    }
+
+    header > img {
+        width:90%;
+    }
+
+    footer > section {
+        width:95%;
+    }
+
+    body > section {
+        width:54%;
+        float:left;
+    }
+
+    aside {
+        width:40%;
+        float:right;
+        font-size: 1em;
+    }
+
+    .touch body {
+        font-size:1.2em
+    }
+
+    .touch p > a {
+        font-size: 1.4em;
+    }
+}
+
+/* ------------------------------------- MEDIA QUERY 2: 41.88 em Iphone (670 px) ------------------------------------- */
+
+@media screen and (max-width: 41.88em) {
+
+    body > nav {
+        display:none;
+    }
+
+    header > nav > ul > li {
+        display: block;
+        margin-right: 0.7em;
+    }
+
+    body > section {
+        width:90%;
+        float:none;
+    }
+
+    aside {
+        width:90%;
+        float:none;
+        font-size: 1em;
+    }
+
+    aside > h1:first-of-type {
+    border-top: .05em solid #000;
+    padding-top: .8em;
+}
+
+    .touch body {
+        font-size: 1.2em;
+    }
+
+    .touch p > a {
+        font-size: 1.4em;
+    }
+}
+
+/* ------------------------------------ Img transition, radius ------------------------------------ */
+img:hover {
+box-shadow: 0.63em 0.63em 0.31em #888888;
+border-radius:50%;
+opacity: 0.6;
+transform: rotate(360deg);
+}
+img {
+    opacity: 1;
+    transition: all 0.7s ease;
+    border: 0.1em solid;
+    border-radius: 1.56em;
+     width: 10%;
+    height: auto;
+
+}
